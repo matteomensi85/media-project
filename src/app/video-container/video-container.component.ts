@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UnsplashApiService } from '../unsplash-api.service';
 
 @Component({
   selector: 'app-video-container',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoContainerComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private api: UnsplashApiService) { }
+  obj: object = {};
+  @Output() jsonEmitter: EventEmitter<object> = new EventEmitter<object>();
   ngOnInit(): void {
   }
 
+  onClickSubmit() {
+    this.api.getUnsplash("finestra").subscribe((x) => { 
+      this.obj = x;
+      console.log(this.obj);
+      this.jsonEmitter.emit(this.obj); 
+    
+    });
+  }
 }

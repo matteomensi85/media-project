@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'media-project';
+  obj: object;
+
+  renderGallery(json: object){
+    this.obj = json
+    console.log("app.component side object: ", this.obj)
+  }
 }

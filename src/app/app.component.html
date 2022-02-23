@@ -1,4 +1,4 @@
 <app-navbar></app-navbar>
-<app-video-container></app-video-container>
-<app-portfolio></app-portfolio>
+<app-video-container (jsonEmitter)="renderGallery($event)"></app-video-container>
+<app-portfolio [prtfObj]="obj" ></app-portfolio>
 <app-footer></app-footer>
