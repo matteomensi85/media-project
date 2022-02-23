@@ -1,10 +1,8 @@
 <div class="full-screen-portfolio" id="portfolio">
-    <input type="button" name="button" id="button" (click)="checkObj()">
     <div class="container-fluid">
-        <div *ngFor="result of prtfObj.results" class="col-md-4 col-sm-6">
-            <p></p>
+        <div *ngFor="result of prtfObj.results; index as i" class="col-md-4 col-sm-6">
             <div class="portfolio-item">
-                <a href="./assets/img/big_portfolio_item_4.png" data-lightbox="image-1"><div class="thumb">
+                <a href="{{prtfObj.results[i].urls.small}}" data-lightbox="image-1"><div class="thumb">
                     <div class="hover-effect">
                         <div class="hover-content">
                             <h1>Biodiesel <em>squid</em></h1>
@@ -12,7 +10,8 @@
                         </div>
                     </div>
                     <div class="image">
-                        <img src={{result.urls.small}} #prtfImg>
+                        <!-- ./assets/img/big_portfolio_item_2.png -->
+                        <img src="{{prtfObj.results[i].urls.small}}" #prtfImg>
                     </div>
                 </div></a>
             </div>

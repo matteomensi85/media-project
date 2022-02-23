@@ -13,7 +13,7 @@ export class UnsplashApiService {
 
   getUnsplash(query: string) {
     
-    let apiUrl: string = `https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${this.apiKey}`;
+    let apiUrl: string = `https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${this.apiKey}&orientation=landscape`;
     console.log(apiUrl);
     return this.http.get(apiUrl);
 

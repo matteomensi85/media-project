@@ -15,7 +15,7 @@ export class VideoContainerComponent implements OnInit {
   }
 
   onClickSubmit() {
-    this.api.getUnsplash("finestra").subscribe((x) => { 
+    this.api.getUnsplash("saxophone").subscribe((x) => { 
       this.obj = x;
       console.log(this.obj);
       this.jsonEmitter.emit(this.obj); 
