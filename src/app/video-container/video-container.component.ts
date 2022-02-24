@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { UnsplashApiService } from '../unsplash-api.service';
 
 @Component({
@@ -14,8 +15,10 @@ export class VideoContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickSubmit() {
-    this.api.getUnsplash("saxophone").subscribe((x) => { 
+  onClickSubmit(myform: NgForm) {
+    let myQuery: string = myform.form.controls.input.value;
+    console.log(myform);
+    this.api.getUnsplash(myQuery).subscribe((x) => { 
       this.obj = x;
       console.log(this.obj);
       this.jsonEmitter.emit(this.obj); 

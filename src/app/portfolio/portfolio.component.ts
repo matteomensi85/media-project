@@ -7,7 +7,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 export class PortfolioComponent implements OnInit, OnChanges {
   array: number[]=[]
-  @Input() prtfObj: any = {};
+  @Input() prtfObj: any = null;
 
   constructor() { }
 

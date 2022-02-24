@@ -2,19 +2,27 @@
     <div class="video-overlay"></div>
     <div class="video-content">
         <div class="inner">
-          <h1>Welcome to <em>Highway</em></h1>
-          <p>FREE CSS TEMPLATE by templatemo</p>
-          <p>Homepage with full-width image gallery</p>
+          <h1>Welcome to my <em>Portfolio</em></h1>
+          <p>Fetch images & videos from...</p>
+          <p>UNSPLASH & VIMEO</p>
             <div class="scroll-icon">
                 <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="./assets/img/scroll-icon.png" alt=""></a>
             </div>
-            <form>
-                <input type="button" value="chiama api" (click)="onClickSubmit()">
+            <br>
+            <br>
+            <!-- <form   >
+                               
+                
+                
+            </form> -->
+            <form (ngSubmit)="onClickSubmit(formRef)" #formRef="ngForm" style="text-align: center;">
+                <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" ngModel name="input">
+                <br>
+                <button class="btn btn-secondary btn-lg" type="submit">CALL API</button>
             </form>
-            
         </div>
     </div>
-    <video autoplay="" loop="" muted>
-        <source src="highway-loop.mp4" type="video/mp4" />
+    <video autoplay loop muted>
+        <source src="../../assets/videos/highway-loop.mp4" type="video/mp4" />
     </video>
 </div>

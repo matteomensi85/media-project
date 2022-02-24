@@ -1,6 +1,6 @@
-<div class="full-screen-portfolio" id="portfolio">
+<div *ngIf="prtfObj != null" class="full-screen-portfolio" id="portfolio">
     <div class="container-fluid">
-        <div *ngFor="result of prtfObj.results; index as i" class="col-md-4 col-sm-6">
+        <div *ngFor="let result of prtfObj.results; index as i" class="col-md-4 col-sm-6">
             <div class="portfolio-item">
                 <a href="{{prtfObj.results[i].urls.small}}" data-lightbox="image-1"><div class="thumb">
                     <div class="hover-effect">
