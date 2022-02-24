@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { apiAccess } from 'src/environments/environment';
 
 
 @Injectable({
@@ -7,7 +8,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class UnsplashApiService {
 
-  private apiKey: string = "hdls7xtRsTSKGWXE6SpupQYBF9X8EJmfhxxAeEeg2AQ";
+  private apiKey: string = apiAccess.accessKey;
   constructor(private http: HttpClient) { }
 
 
