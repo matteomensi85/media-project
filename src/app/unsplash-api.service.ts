@@ -12,9 +12,9 @@ export class UnsplashApiService {
   constructor(private http: HttpClient) { }
 
 
-  getUnsplash(query: string) {
+  getUnsplash(query: string, orient: string, color: string) {
     
-    let apiUrl: string = `https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${this.apiKey}`;
+    let apiUrl: string = `https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${this.apiKey}&orientation=${orient}&per_page=21&color=${color}`;
     console.log(apiUrl);
     return this.http.get(apiUrl);
 

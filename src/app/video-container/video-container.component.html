@@ -10,15 +10,30 @@
             </div>
             <br>
             <br>
-            <!-- <form   >
-                               
-                
-                
-            </form> -->
+     
             <form (ngSubmit)="onClickSubmit(formRef)" #formRef="ngForm" style="text-align: center;">
                 <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" ngModel name="input">
                 <br>
-                <button class="btn btn-secondary btn-lg" type="submit">CALL API</button>
+                <select class="form-control" aria-label="Large"ngModel name="colorSelect">
+                    <option value="black_and_white">black & white</option>
+                    <option value="black">Portrait</option>
+                    <option value="white">yellow</option>
+                    <option value="orange">orange</option>
+                    <option value="red">red</option>
+                    <option value="purple">purple</option>
+                    <option value="magenta">magenta</option>
+                    <option value="green">green</option>
+                    <option value="teal">teal</option>
+                    <option value="blue">blue</option>
+                </select>                
+                <br>
+                <select class="form-control" aria-label="Large" ngModel name="orientSelect">
+                    <option value="landscape">Landscape</option>
+                    <option value="portrait">Portrait</option>
+                    <option value="squarish">Squarish</option>
+                </select>
+                <br>
+                <button class="btn btn-secondary btn-lg" aria-describedby="inputGroup-sizing-sm" type="submit">CALL API</button>
             </form>
         </div>
     </div>

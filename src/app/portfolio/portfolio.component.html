@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div *ngFor="let result of prtfObj.results; index as i" class="col-md-4 col-sm-6">
             <div class="portfolio-item">
-                <a href="{{prtfObj.results[i].urls.small}}" data-lightbox="image-1"><div class="thumb">
+                <a href="{{prtfObj.results[i].urls.full}}" data-lightbox="image-1"><div class="thumb">
                     <div class="hover-effect">
                         <div class="hover-content">
                             <h1>Biodiesel <em>squid</em></h1>
@@ -12,7 +12,7 @@
                     <div class="image">
                         <!-- ./assets/img/big_portfolio_item_2.png -->
                         
-                        <div style="background-image: url({{prtfObj.results[i].urls.small}}); background-size: cover; width: 650px; height: 300px; padding: 0px"> </div>
+                        <div style="background-image: url({{prtfObj.results[i].urls.small   }}); background-size: cover; width: 650px; height: 300px; padding: 0px"> </div>
                     </div>
                 </div></a>
             </div>

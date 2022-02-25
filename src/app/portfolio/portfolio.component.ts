@@ -6,18 +6,12 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit, OnChanges {
-  array: number[]=[]
   @Input() prtfObj: any = null;
 
   constructor() { }
 
   ngOnInit(): void {
-    for(let i = 0; i < 21; i++)
-    {
-      this.array.push(i);
-    }
-    console.log(this.array);
-    console.log("portfolio side object: ",this.prtfObj);
+   
   }
 
   checkObj(){
